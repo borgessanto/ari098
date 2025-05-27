@@ -1,0 +1,165 @@
+/* Estilos Gerais */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+.high-contrast body {
+  background-color: #000 !important;
+  color: #0F0 !important;
+}
+
+.high-contrast a {
+  color: #FF0 !important;
+}
+
+.high-contrast button {
+  background-color: #555 !important;
+  color: #FF0 !important;
+  border: 1px solid #FF0 !important;
+}
+
+.high-contrast header, .high-contrast footer, .high-contrast .content-section {
+  background-color: #222 !important;
+  border: 1px solid #555 !important;
+}
+
+.high-contrast h1, .high-contrast h2, .high-contrast h3 {
+  color: #FFF !important;
+}
+
+.high-contrast .gallery-item img {
+  border: 1px solid #FF0 !important;
+}
+
+
+/* Header */
+header {
+  background: #333;
+  color: #fff;
+  padding: 1rem 0;
+  text-align: center;
+  position: relative; /* Para posicionar o botão de acessibilidade */
+}
+
+header h1 {
+  margin: 0;
+}
+
+header nav ul {
+  padding: 0;
+  list-style: none;
+}
+
+header nav ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+header nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Botão de Acessibilidade */
+#accessibility-btn {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  padding: 8px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9em;
+}
+
+#accessibility-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Conteúdo Principal */
+main {
+  padding: 20px;
+  max-width: 960px;
+  margin: 20px auto;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.content-section {
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.content-section:last-of-type {
+  border-bottom: none;
+}
+
+h2 {
+  color: #007bff;
+  border-bottom: 2px solid #007bff;
+  padding-bottom: 5px;
+  margin-bottom: 20px;
+}
+
+.soil-type {
+  margin-bottom: 15px;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-left: 5px solid #007bff;
+}
+
+.soil-type h3 {
+  color: #333;
+  margin-top: 0;
+}
+
+/* Galeria */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.gallery-item {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-item img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-bottom: 1px solid #eee;
+}
+
+.gallery-item p {
+  padding: 10px;
+  margin: 0;
+  font-weight: bold;
+  color: #555;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #333;
+  color: #fff;
+  margin-top: 20px;
+}
+
+/* Estilos para Acessibilidade (Alto Contraste) */
+/* Gerenciados pelo JavaScript */

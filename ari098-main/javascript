@@ -1,0 +1,34 @@
+document.addEventListener('DOMContentLoaded', () => {
+    const accessibilityBtn = document.getElementById('accessibility-btn');
+    const body = document.body;
+
+    // Função para alternar o modo de alto contraste
+    function toggleHighContrast() {
+        body.classList.toggle('high-contrast');
+        // Salva a preferência do usuário no localStorage
+        const isHighContrast = body.classList.contains('high-contrast');
+        localStorage.setItem('highContrastMode', isHighContrast);
+        updateAccessibilityButtonText(isHighContrast);
+    }
+
+    // Função para atualizar o texto do botão
+    function updateAccessibilityButtonText(isHighContrast) {
+        if (isHighContrast) {
+            accessibilityBtn.textContent = 'Acessibilidade: Ligado';
+        } else {
+            accessibilityBtn.textContent = 'Acessibilidade: Desligado';
+        }
+    }
+
+    // Verifica a preferência do usuário ao carregar a página
+    const savedHighContrastMode = localStorage.getItem('highContrastMode');
+    if (savedHighContrastMode === 'true') {
+        body.classList.add('high-contrast');
+        updateAccessibilityButtonText(true);
+    } else {
+        updateAccessibilityButtonText(false);
+    }
+
+    // Adiciona o evento de clique ao botão
+    accessibilityBtn.addEventListener('click', toggleHighContrast);
+});
